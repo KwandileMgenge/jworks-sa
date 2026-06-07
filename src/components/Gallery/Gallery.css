@@ -75,3 +75,34 @@
   color: var(--grey-mid);
   font-style: italic;
 }
+
+@media (max-width: 900px) {
+  .gallery-inner {
+    padding: 60px 5%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 8px;
+  }
+
+  .g-item.large {
+    grid-column: span 2;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .g-item {
+    min-height: 220px;
+  }
+
+  .g-item.large {
+    grid-column: span 1;
+  }
+}

@@ -10,8 +10,7 @@ export const BRAND = {
   fax:        "+27 86 480 7238",
   emails: {
     director: "jack@jworks-sa.co.za",
-    primary:  "info@jworks-sa.co.za",
-    admin:    "jworks_sa@icloud.com",
+    admin:  "info@jworks-sa.co.za",
   },
   website:    "www.jworks-sa.co.za",
   social:     "@JWORKS_SA",

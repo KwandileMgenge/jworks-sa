@@ -86,27 +86,11 @@ body  {
 .sec-desc { font-size: 15px; color: var(--grey-mid); line-height: 1.75; max-width: 540px; }
 
 /* ── LOGO MARK (shared by Navbar + Footer) ───────────────── */
-.logo-mark {
-  width: 42px;
-  height: 42px;
-  flex-shrink: 0;
-  background: linear-gradient(135deg, var(--blue), var(--lochmara));
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 85% 100%, 0 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -1px;
+.logoPNG {
+  height: 60px;
 }
-.logo-text {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 21px;
-  color: var(--white);
-  letter-spacing: 2px;
+.txtPNG {
+  height: 45px;
 }
 .logo-text span { color: var(--blue); }
 

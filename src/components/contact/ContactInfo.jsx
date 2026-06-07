@@ -24,15 +24,6 @@ const CONTACT_BLOCKS = (brand) => [
         icon: "✉️",
         content: (
           <>
-            <a href={`mailto:${brand.emails.primary}`}>{brand.emails.primary}</a>{" "}
-            <small style={{ color: "var(--grey-mid)" }}>(Primary)</small>
-          </>
-        ),
-      },
-      {
-        icon: "✉️",
-        content: (
-          <>
             <a href={`mailto:${brand.emails.admin}`}>{brand.emails.admin}</a>{" "}
             <small style={{ color: "var(--grey-mid)" }}>(Admin)</small>
           </>

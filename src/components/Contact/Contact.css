@@ -151,3 +151,36 @@
   letter-spacing: 1px;
 }
 .form-success.show { display: block; }
+
+@media (max-width: 900px) {
+  .contact-inner {
+    padding: 60px 5%;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .form-wrap {
+    padding: 28px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-inner {
+    padding: 50px 4%;
+  }
+
+  .form-wrap {
+    padding: 24px;
+  }
+
+  .form-submit {
+    padding: 14px;
+  }
+}

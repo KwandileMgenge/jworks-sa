@@ -40,3 +40,28 @@
   transition: opacity .3s;
 }
 .community-photo:hover { opacity: 1; }
+
+@media (max-width: 900px) {
+  .community-inner {
+    padding: 60px 5%;
+  }
+
+  .community-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .community-photos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .community-photos {
+    grid-template-columns: 1fr;
+  }
+
+  .community-photo {
+    min-height: 180px;
+  }
+}

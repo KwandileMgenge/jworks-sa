@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { NAV_LINKS } from "../../data/constants";
 import "./Navbar.css";
+import Logo from "../../assets/jWorksLogo.png"
+import Text from "../../assets/jWorksTxt.png"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -15,8 +17,12 @@ const Navbar = () => {
   return (
     <nav className={`nav${scrolled ? " scrolled" : ""}`}>
       <a href="#home" className="nav-logo">
-        <div className="logo-mark">JW</div>
-        <div className="logo-text">J WORKS<span>-SA</span></div>
+        <div>
+          <img className="logoPNG" src={Logo} alt="Company Logo" />
+        </div>
+        <div>
+          <img className="txtPNG" src={Text} alt="Company Name" />
+        </div>
       </a>
 
       <ul className={`nav-links${open ? " open" : ""}`}>

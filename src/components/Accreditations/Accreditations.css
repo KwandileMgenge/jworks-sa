@@ -50,3 +50,24 @@
   transition: all .25s;
 }
 .client-badge:hover { background: rgba(33,178,227,.15); border-color: var(--blue); }
+
+@media (max-width: 900px) {
+  .accred-inner {
+    padding: 60px 5%;
+  }
+
+  .accred-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .accred-inner {
+    padding: 50px 4%;
+  }
+
+  .accred-box {
+    padding: 24px;
+  }
+}

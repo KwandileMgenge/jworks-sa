@@ -52,3 +52,27 @@
 }
 .svc-list li:hover { background: rgba(33,178,227,.08); border-left-color: var(--blue); padding-left: 20px; }
 .svc-list li::before { content: '▸'; color: var(--blue); font-size: 11px; flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .services-inner {
+    padding: 60px 5%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-col {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-inner {
+    padding: 50px 4%;
+  }
+
+  .svc-col {
+    padding: 22px;
+  }
+}

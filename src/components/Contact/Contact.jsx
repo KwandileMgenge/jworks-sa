@@ -7,24 +7,21 @@ import "./Contact.css";
 const ContactInfo = () => {
   const blocks = [
     {
-      heading: "Phone & Fax",
+      heading: "Phone",
       items: [
         { icon: "📞", content: <a href={`tel:${BRAND.phoneRaw}`}>{BRAND.phone}</a> },
-        { icon: "📠", content: `${BRAND.fax} (Fax)` },
       ],
     },
     {
       heading: "Email Addresses",
       items: [
         { icon: "✉️", content: <><a href={`mailto:${BRAND.emails.director}`}>{BRAND.emails.director}</a>{" "}<small style={{ color: "var(--grey-mid)" }}>(Director)</small></> },
-        { icon: "✉️", content: <><a href={`mailto:${BRAND.emails.primary}`}>{BRAND.emails.primary}</a>{" "}<small style={{ color: "var(--grey-mid)" }}>(Primary)</small></> },
         { icon: "✉️", content: <><a href={`mailto:${BRAND.emails.admin}`}>{BRAND.emails.admin}</a>{" "}<small style={{ color: "var(--grey-mid)" }}>(Admin)</small></> },
       ],
     },
     {
-      heading: "Web & Social",
+      heading: "Social",
       items: [
-        { icon: "🌐", content: <a href={`https://${BRAND.website}`} target="_blank" rel="noreferrer">{BRAND.website}</a> },
         { icon: "📱", content: BRAND.social },
       ],
     },

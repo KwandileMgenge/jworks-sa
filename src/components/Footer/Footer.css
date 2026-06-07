@@ -70,3 +70,36 @@ footer {
   transition: all .2s;
 }
 .social-pill:hover { background: var(--blue); color: #fff; }
+
+@media (max-width: 900px) {
+  footer {
+    padding: 44px 5% 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 28px;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    gap: 22px;
+  }
+
+  .footer-bottom {
+    align-items: center;
+  }
+
+  .social-pill {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
