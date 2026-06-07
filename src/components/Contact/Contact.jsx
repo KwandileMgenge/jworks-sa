@@ -41,12 +41,16 @@ const ContactInfo = () => {
         </div>
       ))}
       <div className="map-ph">
-        <div className="pin">📍</div>
-        <span>
-          <strong style={{ color: "var(--blue)" }}>J WORKS-SA</strong><br />
-          KwaZulu-Natal, South Africa<br />
-          <small>Embed your Google Maps link here</small>
-        </span>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13859.813161899545!2d30.955929599999997!3d-29.721112249999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70338137d923d%3A0xe164b2788317ca4!2sPalace%20View%20Estate!5e0!3m2!1sen!2sza!4v1780833808339!5m2!1sen!2sza"
+          width="600"
+          height="450"
+          style={{ border: 0, width: "100%", height: "100%" }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="J WORKS-SA Location"
+        />
       </div>
     </div>
   );
