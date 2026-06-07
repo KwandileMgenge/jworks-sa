@@ -1,0 +1,52 @@
+.accred-section { background: var(--navy); }
+.accred-inner   { max-width: 1200px; margin: 0 auto; padding: 90px 5%; }
+
+.accred-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 44px;
+}
+
+.accred-box {
+  background: var(--zodiac);
+  border: 1px solid rgba(255,255,255,.08);
+  border-top: 3px solid var(--blue);
+  padding: 32px;
+}
+.accred-box h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--blue);
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.badge-row { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.accred-badge {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 9px 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--mist);
+}
+
+.client-badge {
+  background: rgba(33,178,227,.06);
+  border: 1px solid rgba(33,178,227,.2);
+  padding: 9px 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  color: var(--white);
+  transition: all .25s;
+}
+.client-badge:hover { background: rgba(33,178,227,.15); border-color: var(--blue); }

@@ -1,0 +1,85 @@
+.about-section { background: var(--navy); }
+.about-inner   { max-width: 1200px; margin: 0 auto; padding: 90px 5%; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── Quote box ─── */
+.about-box {
+  background: var(--zodiac);
+  border: 1px solid rgba(255,255,255,.08);
+  border-top: 4px solid var(--blue);
+  padding: 36px;
+  position: relative;
+}
+.about-box::before {
+  content: '"';
+  position: absolute;
+  top: 8px; right: 20px;
+  font-size: 90px;
+  font-family: Georgia, serif;
+  color: rgba(33,178,227,.1);
+  line-height: 1;
+}
+.about-quote { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--off-white); font-style: italic; }
+
+.founder-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.founder-av {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--zodiac), var(--navy-lt));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--blue);
+}
+.founder-name { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; }
+.founder-role { font-size: 11px; color: var(--blue); }
+
+/* ── Values ─── */
+.values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+.val-item {
+  background: rgba(33,178,227,.06);
+  border-left: 3px solid var(--blue);
+  padding: 12px 14px;
+}
+.val-item strong { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--blue); }
+.val-item span   { font-size: 11px; color: var(--grey-mid); line-height: 1.5; }
+
+/* ── Mission / Vision ─── */
+.mission-card {
+  background: var(--zodiac);
+  border-left: 4px solid var(--blue);
+  padding: 22px 26px;
+  margin-bottom: 14px;
+}
+.mission-card h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--blue); letter-spacing: 1.5px; margin-bottom: 8px; }
+.mission-card p  { font-size: 13px; line-height: 1.75; color: var(--grey-mid); }
+
+/* ── Approach ─── */
+.approach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+.approach-item {
+  background: rgba(33,178,227,.04);
+  border: 1px solid rgba(33,178,227,.12);
+  padding: 16px;
+  transition: all .3s;
+}
+.approach-item:hover { background: rgba(33,178,227,.08); border-color: var(--blue); }
+.approach-item h5 { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--blue); margin-bottom: 6px; letter-spacing: .8px; }
+.approach-item p  { font-size: 12px; color: var(--grey-mid); line-height: 1.6; }

@@ -1,0 +1,42 @@
+.community-section { background: var(--zodiac); }
+.community-inner   { max-width: 1200px; margin: 0 auto; padding: 90px 5%; }
+
+.community-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 44px;
+}
+
+.community-text p { font-size: 15px; color: var(--grey-mid); line-height: 1.8; margin-bottom: 14px; }
+.community-text strong { color: var(--blue); }
+
+.community-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(33,178,227,.1);
+  border: 1px solid rgba(33,178,227,.3);
+  padding: 8px 16px;
+  margin-top: 6px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--blue);
+}
+
+.community-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.community-photo {
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #071929, #0d2845);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  opacity: .7;
+  transition: opacity .3s;
+}
+.community-photo:hover { opacity: 1; }
