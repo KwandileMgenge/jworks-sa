@@ -1,0 +1,27 @@
+.strip {
+  background: var(--orange-dark);
+  padding: 16px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+.stripRow { display: flex; align-items: center; gap: 20px; }
+.stripItem {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  white-space: nowrap;
+}
+.stripDot {
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  flex-shrink: 0;
+}

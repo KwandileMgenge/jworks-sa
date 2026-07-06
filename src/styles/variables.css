@@ -1,0 +1,14 @@
+:root {
+  --charcoal: #071929;
+  --charcoal-mid: #0d2845;
+  --charcoal-light: #0e3460;
+  --orange: #21b2e3;
+  --orange-dark: #067cbf;
+  --orange-glow: rgba(33, 178, 227, 0.15);
+  --mist: #bbcdd7;
+  --white: #ffffff;
+  --off-white: #f0f5f8;
+  --grey-light: #dde8ed;
+  --grey-mid: #8aacba;
+  --text-dark: #071929;
+}

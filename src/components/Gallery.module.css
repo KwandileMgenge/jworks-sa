@@ -1,0 +1,86 @@
+.gallery { background: var(--charcoal); }
+.inner { max-width: 1200px; margin: 0 auto; padding: 90px 5%; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 4px;
+  margin-top: 48px;
+}
+
+.item {
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: filter 0.35s;
+}
+.item:hover { filter: brightness(1.15); }
+.item:hover .overlay { opacity: 1; }
+
+.large { grid-row: span 2; aspect-ratio: unset; min-height: 360px; }
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.placeholderIcon { font-size: 40px; opacity: 0.5; }
+.placeholderText {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--grey-mid);
+  text-align: center;
+  white-space: pre-line;
+}
+
+/* Gradient backgrounds */
+.gi-1 { background: linear-gradient(135deg, #071929 0%, #0d2845 50%, #071520 100%); }
+.gi-2 { background: linear-gradient(135deg, #071d2e 0%, #0a3050 50%, #051520 100%); }
+.gi-3 { background: linear-gradient(135deg, #071929 0%, #0e2d4a 50%, #040f1e 100%); }
+.gi-4 { background: linear-gradient(135deg, #0a2035 0%, #0f3256 50%, #071929 100%); }
+.gi-5 { background: linear-gradient(135deg, #07202e 0%, #0b3348 50%, #041520 100%); }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 124, 191, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.overlay span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.note {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--grey-mid);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .large { grid-column: span 2; aspect-ratio: 16/9; }
+}

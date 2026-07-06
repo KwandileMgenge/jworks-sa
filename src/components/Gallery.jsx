@@ -1,35 +1,33 @@
-import { GALLERY_ITEMS } from "../../data/constants";
-import { SectionHeader } from "../ui/Primitives";
+import { GALLERY_ITEMS } from '../data/siteData';
+import styles from './Gallery.module.css';
 
-// ─── Gallery Item ─────────────────────────────────────────────────
-const GalleryItem = ({ icon, label, tag, cls, large }) => (
-  <div className={`g-item${large ? " large" : ""} ${cls}`}>
-    <div className="g-ph">
-      <div className="g-ph-icon">{icon}</div>
-      <div className="g-ph-text" style={{ whiteSpace: "pre-line" }}>{label}</div>
-    </div>
-    <div className="g-overlay"><span>{tag}</span></div>
-  </div>
-);
+export default function Gallery() {
+  return (
+    <section id="gallery" className={styles.gallery}>
+      <div className={styles.inner}>
+        <div className="section-label">Our Work</div>
+        <h2 className="section-title">Project <span>Gallery</span></h2>
+        <p className="section-desc">
+          A showcase of our construction craftsmanship and energy supply operations across
+          South Africa.
+        </p>
 
-// ─── Gallery ──────────────────────────────────────────────────────
-const Gallery = () => (
-  <section id="gallery" className="gallery-section">
-    <div className="gallery-inner">
-      <SectionHeader
-        label="Our Work"
-        title="Project"
-        accent="Gallery"
-        desc="A showcase of our construction craftsmanship and energy supply operations across South Africa."
-      />
-      <div className="gallery-grid">
-        {GALLERY_ITEMS.map(item => (
-          <GalleryItem key={item.label} {...item} />
-        ))}
+        <div className={styles.grid}>
+          {GALLERY_ITEMS.map(({ icon, label, tag, cls, large }) => (
+            <div
+              key={tag}
+              className={`${styles.item} ${styles[cls]} ${large ? styles.large : ''}`}
+            >
+              <div className={styles.placeholder}>
+                <div className={styles.placeholderIcon}>{icon}</div>
+                <div className={styles.placeholderText}>{label}</div>
+              </div>
+              <div className={styles.overlay}><span>{tag}</span></div>
+            </div>
+          ))}
+        </div>
+        <p className={styles.note}>📸 Replace the placeholder tiles above with your actual project photos.</p>
       </div>
-      <p className="gallery-note">📸 Replace placeholder tiles with your actual project photos.</p>
-    </div>
-  </section>
-);
-
-export default Gallery;
+    </section>
+  );
+}

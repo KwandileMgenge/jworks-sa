@@ -1,0 +1,117 @@
+.footer {
+  background: #040f1a;
+  border-top: 3px solid var(--orange-dark);
+  padding: 60px 5% 30px;
+}
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Brand */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.logoMark {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 85% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+.logoText {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--white);
+  letter-spacing: 2px;
+}
+.logoText span { color: var(--orange); }
+
+.tagline {
+  font-size: 13px;
+  color: var(--grey-mid);
+  margin-top: 16px;
+  line-height: 1.6;
+  font-style: italic;
+}
+.tagline strong { color: var(--orange); font-style: normal; }
+
+/* Columns */
+.col h5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--orange);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(33, 178, 227, 0.2);
+}
+.links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.links a {
+  font-size: 13px;
+  color: var(--grey-mid);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.links a::before { content: '\203A'; color: var(--orange); }
+.links a:hover { color: var(--white); }
+
+.contactList { display: flex; flex-direction: column; gap: 8px; }
+.contactList div { font-size: 13px; color: var(--grey-mid); }
+.contactList a { color: var(--orange); text-decoration: none; }
+.contactList a:hover { text-decoration: underline; }
+
+/* Bottom bar */
+.bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.copy { font-size: 12px; color: var(--grey-mid); }
+.copy a { color: var(--orange); text-decoration: none; }
+
+.social { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--grey-mid); }
+.socialPill {
+  background: rgba(33, 178, 227, 0.1);
+  border: 1px solid rgba(33, 178, 227, 0.3);
+  color: var(--orange);
+  padding: 5px 12px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.socialPill:hover { background: var(--orange); color: white; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; gap: 40px; }
+  .bottom { flex-direction: column; text-align: center; }
+}

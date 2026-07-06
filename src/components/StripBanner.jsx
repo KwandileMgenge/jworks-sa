@@ -1,21 +1,15 @@
-import { BRAND } from "../../data/constants";
+import { STRIP_ITEMS } from '../data/siteData';
+import styles from './StripBanner.module.css';
 
-const ITEMS = [
-  "🏗️ Construction & Home Improvements",
-  "⛽ Fuel & Energy Supply",
-  "🏆 Quality Workmanship",
-  `📞 ${BRAND.phone}`,
-];
-
-const StripBanner = () => (
-  <div className="strip">
-    {ITEMS.map((item, i) => (
-      <span key={item} style={{ display: "flex", alignItems: "center", gap: 36 }}>
-        <span className="strip-item">{item}</span>
-        {i < ITEMS.length - 1 && <span className="strip-dot" />}
-      </span>
-    ))}
-  </div>
-);
-
-export default StripBanner;
+export default function StripBanner() {
+  return (
+    <div className={styles.strip}>
+      {STRIP_ITEMS.map((item, i) => (
+        <div key={item} className={styles.stripRow}>
+          <span className={styles.stripItem}>{item}</span>
+          {i < STRIP_ITEMS.length - 1 && <span className={styles.stripDot} />}
+        </div>
+      ))}
+    </div>
+  );
+}

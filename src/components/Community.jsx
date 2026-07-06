@@ -1,39 +1,40 @@
-import { SectionHeader } from "../ui/Primitives";
+import styles from './Community.module.css';
 
-const COMMUNITY_PHOTOS = ["🏉", "🤝", "👕", "🏆"];
+export default function Community() {
+  return (
+    <section id="community" className={styles.community}>
+      <div className={styles.inner}>
+        <div className={styles.grid}>
+          <div className="anim-1">
+            <div className="section-label">Social Responsibility</div>
+            <h2 className="section-title">
+              Empowering The <span>Youth</span>
+            </h2>
+            <p className="section-desc" style={{ maxWidth: 'none', marginBottom: '24px' }}>
+              As a proudly 100% Black-owned youth enterprise, J WORKS-SA is deeply passionate
+              about driving tangible social upliftment across South African townships. Our
+              cornerstone corporate social investment framework focuses on empowering local
+              youth through community sports and shared educational resources.
+            </p>
+            <div className={styles.card}>
+              <h4>Township Rugby Sponsorships</h4>
+              <p>
+                We proudly sponsor grassroots township rugby clubs by providing complete
+                professional rugby match kits, modern training equipment, and nutritious food
+                packs for competitive tournaments — steering youth toward positive development,
+                teamwork, health, and a stronger community.
+              </p>
+            </div>
+          </div>
 
-const Community = () => (
-  <section id="community" className="community-section">
-    <div className="community-inner">
-      <SectionHeader
-        label="Giving Back"
-        title="Community"
-        accent="Development"
-        desc="Our goal is to empower and uplift local communities — particularly the youth — through sports and shared resources."
-      />
-      <div className="community-grid">
-        <div className="community-text">
-          <p>
-            We proudly sponsor township rugby clubs, providing them with rugby kits, training
-            equipment, and food packs for tournaments. This initiative strengthens community
-            ties while showcasing J Works SA as a company that values social development.
-          </p>
-          <p>
-            As a{" "}
-            <strong style={{ color: "var(--blue)" }}>100% Black-owned youth business</strong>,
-            we're passionate about creating positive change and contributing to local communities
-            through sustainable employment and excellence-driven services.
-          </p>
-          <div className="community-badge">🏉 Township Rugby Club Sponsors</div>
-        </div>
-        <div className="community-photos">
-          {COMMUNITY_PHOTOS.map((emoji, i) => (
-            <div className="community-photo" key={i}>{emoji}</div>
-          ))}
+          <div className={`${styles.visual} anim-2`}>
+            <div className={styles.visualIcon}>🏉</div>
+            <div className={styles.visualText}>
+              Township Rugby Sponsorship<br />Programme
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
-
-export default Community;
+    </section>
+  );
+}

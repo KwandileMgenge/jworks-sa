@@ -1,0 +1,177 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 68px;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background:
+    /* Layer 1: The dark color overlay that sits on top of the image */
+    linear-gradient(135deg, rgba(7,25,41,0.95) 0%, rgba(13,40,69,0.80) 50%, rgba(7,25,41,0.92) 100%),
+    /* Layer 2: Your image link */
+    url("../assets/ariel-view.jpg");
+    
+  /* Ensures the image stretches beautifully without distorting */
+  background-size: cover;
+  background-position: center;
+}
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background-image:
+    linear-gradient(var(--orange) 1px, transparent 1px),
+    linear-gradient(90deg, var(--orange) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.heroAccent {
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(33,178,227,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.heroSplit {
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 45%;
+  background: linear-gradient(to left, rgba(33,178,227,0.05), transparent);
+  border-left: 1px solid rgba(33,178,227,0.15);
+}
+.heroLines {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 5px;
+  background: repeating-linear-gradient(to bottom, var(--orange) 0, var(--orange) 20px, transparent 20px, transparent 30px);
+  opacity: 0.6;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Left */
+.heroTag {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  padding: 5px 14px;
+  margin-bottom: 24px;
+  clip-path: polygon(0 0, 100% 0, 96% 100%, 4% 100%);
+  background: rgba(33, 178, 227, 0.08);
+}
+
+.heroHeadline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(48px, 6vw, 82px);
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+.accent { color: var(--orange); display: block; }
+
+.heroSub {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--grey-mid);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 420px;
+  letter-spacing: 0.3px;
+}
+.heroSub strong { color: var(--orange); font-weight: 600; }
+
+.heroBtns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* Right */
+.heroRight { display: flex; flex-direction: column; gap: 16px; }
+
+.heroStatRow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.heroStat {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--orange);
+  padding: 20px;
+  transition: all 0.3s;
+}
+.heroStat:hover {
+  background: rgba(33, 178, 227, 0.08);
+  border-color: var(--orange);
+  transform: translateY(-3px);
+}
+.statNum {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1;
+}
+.statLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--grey-mid);
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.servicePreview {
+  background: rgba(33, 178, 227, 0.06);
+  border: 1px solid rgba(33, 178, 227, 0.2);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.serviceIcon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  background: var(--orange);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.servicePreview strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+.servicePreview span { font-size: 13px; color: var(--grey-mid); }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .heroContent { grid-template-columns: 1fr; }
+  .heroRight { display: none; }
+  .heroBtns { flex-direction: column; }
+}

@@ -1,84 +1,67 @@
-import { BRAND, VALUES, APPROACH } from "../../data/constants";
-import { SectionHeader } from "../ui/Primitives";
+import { CORE_VALUES } from '../data/siteData';
+import styles from './About.module.css';
 
-// ─── Value Card ───────────────────────────────────────────────────
-const ValueCard = ({ icon, title, desc }) => (
-  <div className="val-item">
-    <strong>{icon} {title}</strong>
-    <span>{desc}</span>
-  </div>
-);
-
-// ─── Approach Card ────────────────────────────────────────────────
-const ApproachCard = ({ title, desc }) => (
-  <div className="approach-item">
-    <h5>{title}</h5>
-    <p>{desc}</p>
-  </div>
-);
-
-// ─── About ────────────────────────────────────────────────────────
-const About = () => (
-  <section id="about" className="about-section">
-    <div className="about-inner">
-      <SectionHeader
-        label="Who We Are"
-        title="About"
-        accent="J WORKS-SA"
-        desc={`Founded in ${BRAND.founded}, a multi-division company specialising in construction, infrastructure development, and energy product supply across South Africa.`}
-      />
-      <div className="about-grid">
-        {/* Left: quote + values */}
-        <div>
-          <div className="about-box">
-            <p className="about-quote">
-              "J Works SA delivers comprehensive construction and property development solutions
-              to private and public sector clients. Our subsidiary, J Black Holdings, provides
-              specialised energy solutions to the same sectors. Our reputation is built on
-              integrity, quality, and an energetic approach led by a young and dynamic leadership team."
-            </p>
-            <div className="founder-strip">
-              <div className="founder-av">JG</div>
-              <div>
-                <div className="founder-name">{BRAND.director}</div>
-                <div className="founder-role">Director &amp; Founder, J WORKS-SA</div>
+export default function About() {
+  return (
+    <section id="about" className={styles.about}>
+      <div className={styles.inner}>
+        <div className={styles.grid}>
+          {/* Quote + values */}
+          <div className={`${styles.visual} anim-1`}>
+            <div className={styles.box}>
+              <p className={styles.quote}>
+                J WORKS-SA aims to deliver high-quality liquified gas and construction services.
+                We are committed to excellent, cost-effective customer service while creating
+                employment opportunities in the industry.
+              </p>
+              <div className={styles.values}>
+                {CORE_VALUES.map(({ label, desc }) => (
+                  <div key={label} className={styles.valueItem}>
+                    <strong>{label}</strong>
+                    <span>{desc}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-          <div className="values-grid">
-            {VALUES.map(v => <ValueCard key={v.title} {...v} />)}
-          </div>
-        </div>
 
-        {/* Right: mission, vision, approach */}
-        <div>
-          <div className="mission-card">
-            <h4>🎯 Mission</h4>
-            <p>
-              To drive excellence and innovation in construction and energy solutions, delivering
-              reliable, high-quality services that exceed client expectations. By prioritising
-              workmanship, integrity, and adaptability, we aim to build a legacy of trust and
-              sustainable growth.
+          {/* Text column */}
+          <div className={`${styles.textCol} anim-2`}>
+            <div className="section-label">Who We Are</div>
+            <h2 className="section-title">About <span>J WORKS-SA</span></h2>
+            <p className="section-desc" style={{ maxWidth: 'none' }}>
+              Founded in 2014, J WORKS-SA is a proudly South African, 100% Black-owned, youth-led
+              company operating at the intersection of construction excellence and energy supply.
+              Our dual-sector expertise means we serve residential clients, private and commercial
+              enterprises, major municipalities, and state-owned entities with the same level of
+              care and professionalism.
             </p>
-          </div>
-          <div className="mission-card">
-            <h4>🔭 Vision</h4>
-            <p>
-              To expand employment opportunities within our communities and establish J Works SA
-              as a legacy brand synonymous with quality and excellence in the construction and
-              energy sectors.
+            <p className={styles.subPara}>
+              From bathroom renovations in your home to bulk fuel supply contracts for your fleet
+              — via our dedicated subsidiary, <strong>J Black Holdings</strong> — J WORKS-SA brings
+              quality workmanship and cost-effective solutions under one trusted brand.
             </p>
-          </div>
-          <div className="sec-label" style={{ marginTop: 20, marginBottom: 14 }}>
-            Our Approach
-          </div>
-          <div className="approach-grid">
-            {APPROACH.map(a => <ApproachCard key={a.title} {...a} />)}
+
+            <div className={styles.missionBlock}>
+              <h4>Our Mission</h4>
+              <p>
+                To drive excellence and continuous innovation across the construction and energy
+                sectors, delivering highly reliable, premium-quality solutions that consistently
+                exceed our clients' expectations — through superior workmanship, corporate
+                integrity, and operational adaptability.
+              </p>
+            </div>
+            <div className={styles.missionBlock}>
+              <h4>Our Vision</h4>
+              <p>
+                To continuously expand sustainable employment opportunities within our local
+                communities and firmly establish J WORKS-SA as a legacy African brand synonymous
+                with elite quality and regional excellence.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
-
-export default About;
+    </section>
+  );
+}

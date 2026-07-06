@@ -1,0 +1,108 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(7, 25, 41, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--orange);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  transition: background 0.3s;
+}
+.navScrolled { background: rgba(4, 15, 26, 0.99); }
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Spacing between the logo mark image and logo text image */
+  text-decoration: none;
+}
+
+.logoMark > img {
+  height: 50px; /* Constrains both images to the same height */
+}
+
+.logoText > img {
+  height: 40px; /* Constrains both images to the same height */
+}
+
+/* Links */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+.navLinks a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+.navLinks a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--orange);
+  transition: width 0.3s;
+}
+.navLinks a:hover { color: var(--white); }
+.navLinks a:hover::after { width: 100%; }
+
+.navCta {
+  background: var(--orange) !important;
+  color: var(--white) !important;
+  padding: 8px 20px !important;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%) !important;
+}
+.navCta::after { display: none !important; }
+.navCta:hover { background: var(--orange-dark) !important; }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--white);
+  transition: all 0.3s;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--charcoal);
+    padding: 20px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 16px;
+  }
+  .navLinks.open { display: flex; }
+  .hamburger { display: flex; }
+}
